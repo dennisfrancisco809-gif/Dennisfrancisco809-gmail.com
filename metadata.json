@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Copy of Chat On",
+  "description": "A modern social network combining the speed of WhatsApp's registration with the rich media experience of Facebook Messenger. Share posts, watch videos, and chat seamlessly.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
