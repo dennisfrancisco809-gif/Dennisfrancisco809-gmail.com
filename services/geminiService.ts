@@ -1,7 +1,8 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: gen-lang-client-0581095772
+open_in_new});
 
 export const getSmartReply = async (messages: string[]): Promise<string> => {
   try {
