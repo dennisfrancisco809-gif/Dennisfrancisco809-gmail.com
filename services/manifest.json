@@ -1,0 +1,18 @@
+
+{
+  "name": "Chat On Social",
+  "short_name": "ChatOn",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0f2f5",
+  "theme_color": "#0084FF",
+  "description": "Rede social moderna com chat inteligente.",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968771.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

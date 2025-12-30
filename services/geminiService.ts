@@ -1,8 +1,9 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
+"gen-lang-client-058109577"
 
-const ai = new GoogleGenAI({ apiKey: gen-lang-client-0581095772
-open_in_new});
+// Inicializa a API usando a variável de ambiente segura
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getSmartReply = async (messages: string[]): Promise<string> => {
   try {
@@ -14,10 +15,10 @@ export const getSmartReply = async (messages: string[]): Promise<string> => {
         thinkingConfig: { thinkingBudget: 0 }
       }
     });
-    return response.text || "Cool!";
+    return response.text || "Legal!";
   } catch (error) {
     console.error("Gemini Error:", error);
-    return "Nice!";
+    return "Bacana!";
   }
 };
 
@@ -40,6 +41,6 @@ export const generateMockPost = async (): Promise<any> => {
         });
         return JSON.parse(response.text);
     } catch (e) {
-        return { text: "Enjoying the sun!", imageTopic: "Beach sunset" };
+        return { text: "Aproveitando o dia!", imageTopic: "Pôr do sol na praia" };
     }
 }

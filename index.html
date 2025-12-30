@@ -11,11 +11,20 @@
 </script>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Chat On - Social Network</title>
+    
+    <!-- Configurações para Android/PWA -->
+    <meta name="theme-color" content="#0084FF">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5968/5968771.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -49,26 +58,6 @@
             --border: #4a2c81;
         }
 
-        .theme-forest {
-            --primary: #2ecc71;
-            --primary-foreground: #ffffff;
-            --background: #0d1b1e;
-            --surface: #1a2e35;
-            --text-main: #ecf0f1;
-            --text-muted: #95a5a6;
-            --border: #2c3e50;
-        }
-
-        .theme-ocean {
-            --primary: #00d2ff;
-            --primary-foreground: #1c1e21;
-            --background: #000c18;
-            --surface: #001f3f;
-            --text-main: #ffffff;
-            --text-muted: #8bb0c4;
-            --border: #003366;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--background);
@@ -77,6 +66,7 @@
             padding: 0;
             overflow-x: hidden;
             transition: background-color 0.3s ease, color 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .bg-app-bg { background-color: var(--background); }
@@ -87,24 +77,8 @@
         .bg-app-primary { background-color: var(--primary); }
         .text-app-primary { color: var(--primary); }
 
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
-        
-        .animate-fadeIn {
-            animation: fadeIn 0.3s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body>
